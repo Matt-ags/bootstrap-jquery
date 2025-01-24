@@ -4,74 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Portfólio</title>
 </head>
 <body>
     <!-- titulo -->
     <header>
         <h1>Portfólio - Fulano de Tal</h1>
-        <p>Olá, meu nome é Fulano de Tal e sou desenvolvedor web.</p>
+        <p class="sobre">Olá, meu nome é Fulano de Tal e sou desenvolvedor web.</p>
     </header>
 
     <!-- sobre mim -->
     <section>
         <h2>Sobre Mim:</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ullam, rerum quaerat excepturi enim amet, praesentium alias voluptatum, expedita ratione voluptate laudantium labore ex ipsum dignissimos explicabo quas dolores voluptates!</p>
+        <p
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ullam, rerum quaerat excepturi enim amet, praesentium alias voluptatum, expedita ratione voluptate laudantium labore ex ipsum dignissimos explicabo quas dolores voluptates!</p>
     </section>
     <!-- habilidades -->
     <section>
-    <h2>habilidades</h2>
+    <h2>Habilidades</h2>
 
-    <!-- linguagens -->
-    <div>
-     <h3>linguagens</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </div>
-        <!-- resumo rápido sobre listas:
-         ul: lista não ordenada, só pontos;
-         ol: lista ordenada; -->
-
-    <!-- tecnologias -->
-    <div>
-        <h3>Tecnologias</h3>
+    <div class="hab-grupo">
+        <!-- linguagens -->
+        <div class="habilidades linguagem">
+            <h3>linguagens</h3>
             <ul>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
             </ul>
+        </div>
+            <!-- resumo rápido sobre listas:
+                ul: lista não ordenada, só pontos;
+                ol: lista ordenada; -->
+    
+        <!-- tecnologias -->
+        <div class="habilidades tecnologia">
+            <h3>Tecnologias</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                </ul>
+        </div>
     </div>
+
+    
     </section>
 
     <!-- projetos -->
     <section>
     <h2>Projetos</h2>
 
-    <div>
-        <h3>Análise de Dados com Python</h3>
-        <img 
-        src="https://placehold.co/600x400" alt="print do projeto de analise de dados com python">
-        <a target="_blank" href="http://github.com">Acessar o projeto no github.</a> 
+    <div class="projetos">
+        <div class="projeto">
+            <h3>Análise de Dados com Python</h3>
+            <img 
+            src="https://placehold.co/600x400" alt="print do projeto de analise de dados com python">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a> 
+        </div>
+    
+        <div class="projeto">
+            <h3>Projeto de automação com Python</h3>
+            <img 
+             src="https://placehold.co/600x400" alt="print do projeto de automação com python">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
+        </div>
+    
+        <div class="projeto">
+            <h3>Página simples com HTML</h3>
+            <img 
+             src="https://placehold.co/600x400" alt="print do projeto HTML">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
+        </div>
+    
     </div>
-
-    <div>
-        <h3>Projeto de automação com Python</h3>
-        <img 
-         src="https://placehold.co/600x400" alt="print do projeto de automação com python">
-        <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
-    </div>
-
-    <div>
-        <h3>Página simples com HTML</h3>
-        <img 
-         src="https://placehold.co/600x400" alt="print do projeto HTML">
-        <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
-    </div>
-
+    
     </section>
 
 

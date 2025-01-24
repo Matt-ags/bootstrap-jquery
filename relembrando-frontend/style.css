@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%; 
+    /* uma dica contra quebra de linha */
+}
+
+body{
+    background-color: #222;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #111;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.habilidades, .projeto{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projetos{
+    display: flex;
+    gap: 20px;
+}
+
+.sobre{
+    font-size: 20px;
+    line-height: 100%;
+}
+/* .tecnologias{
+    background-color: #444;
+} */
+ /* Sim, eu posso chamar uma classe com dois nomes, e elas estando separadas por espaço, verifica o html. */
+
+section, footer {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section{
+    border-bottom: 1px solid #555;
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+}
+.hab-grupo{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+ul{
+    margin-left: 20px;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
