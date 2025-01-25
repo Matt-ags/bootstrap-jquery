@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando JQUERY pela primeira vez</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- acima é o "jquery"
+    podemos instalar normalmente, ou pegar de um servidor. Linkei a versão core 3.7.1 minified, para maior otimização. -->
+</head>
+<body>
+    
+    <div>
+        <h1>
+            Lista de Nomes
+        </h1>
+    </div>
+
+    <div>
+        <ul style="font-size: 30px;">
+            <li>José</li>
+            <li>Jesonel</li>
+            <li>Josémira</li>
+            <li>Cleiton</li>
+            <li>Cláudia</li>
+            <li>Cláudio</li>
+            <li>Cláudete</li>
+        </ul>
+    </div>
+
+    <div>
+        <button id="btn">Clique-me!</button>
+    </div>
+
+    <script>
+        //Estrutura básica:
+        //$('elemento_que_quero_editar').função_que_quero_executar();
+        // Em "função_que_quero_executar", são as ações do jquery! qualquer duvida, podemos acessar a documentação do jquery.
+
+        //Vamos realizar uma comparação, js x jquery:
+
+        // Remover as "listas" da tela com jquery:
+
+        // $('li').remove();
+
+        // Remover as "listas" da tela com js:
+
+        // let lista = document.querySelectorAll('li');
+        // lista.forEach((item) => {
+        //     item.remove();
+        // });
+
+        // Ambos fazem a mesma coisa, mas o jquery é mais simples e direto ao ponto.
+
+        // Certo, mas como podemos trabalhar com funções? para interações, etc?
+
+        // Primeiro: Crie a função, e o que ela vai fazer:
+
+        function botao(){
+            $('h1').remove() // remover o h1
+        }
+
+        // Segundo: Chamar o "objeto" que vai executar a função:
+
+        $('#btn').on("click",botao);
+        //.on -> vai chamar/pede os parametros
+        // o "click", é o nome do evento que vai ser chamado, no caso, o click do botão.
+        // botao -> é a função que vai ser executada.
+
+        // Lembrando que esta é uma maneira, podemos simplesmente fazer assim:
+
+        // $('#btn').on("click",function(){
+        //     $('h1').remove();
+        // });
+
+        // Ou seja, não precisamos criar uma função, podemos fazer tudo em uma linha.
+
+        // Contudo, realizei desta forma para ficar mais claro o entendimento.
+    </script>
+</body>
+</html>
