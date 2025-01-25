@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio com Jquery</title>
+    <link rel="stylesheet" href="./style-jquery.css">
+
+    <!-- Arquivos Jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- arquivos bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- titulo -->
+    <header>
+        <div class="container-titulo">
+            <h1>Portfólio - Fulano de Tal</h1>
+            <p class="sobre">Olá, meu nome é Fulano de Tal e sou desenvolvedor web.</p>
+        </div>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault" id="tema">Tema Escuro</label>
+          </div>
+    </header>
+
+    <!-- sobre mim -->
+    <section>
+        <h2>Sobre Mim:</h2>
+        <p
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ullam, rerum quaerat excepturi enim amet, praesentium alias voluptatum, expedita ratione voluptate laudantium labore ex ipsum dignissimos explicabo quas dolores voluptates!</p>
+    </section>
+    <!-- habilidades -->
+    <section>
+    <h2>Habilidades</h2>
+
+    <div class="hab-grupo">
+        <!-- linguagens -->
+        <div class="habilidades linguagem">
+            <h3>linguagens</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+            </ul>
+        </div>
+            <!-- resumo rápido sobre listas:
+                ul: lista não ordenada, só pontos;
+                ol: lista ordenada; -->
+    
+        <!-- tecnologias -->
+        <div class="habilidades tecnologia">
+            <h3>Tecnologias</h3>
+                <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                </ul>
+        </div>
+    </div>
+
+    
+    </section>
+
+    <!-- projetos -->
+    <section>
+    <h2>Projetos</h2>
+
+    <div class="projetos">
+        <div class="projeto">
+            <h3>Análise de Dados com Python</h3>
+            <img 
+            src="https://placehold.co/600x400" alt="print do projeto de analise de dados com python">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a> 
+        </div>
+    
+        <div class="projeto">
+            <h3>Projeto de automação com Python</h3>
+            <img 
+             src="https://placehold.co/600x400" alt="print do projeto de automação com python">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
+        </div>
+    
+        <div class="projeto">
+            <h3>Página simples com HTML</h3>
+            <img 
+             src="https://placehold.co/600x400" alt="print do projeto HTML">
+            <a target="_blank" href="http://github.com">Acessar o projeto no github.</a>
+        </div>
+    
+    </div>
+    
+    </section>
+
+        <!-- Entre em Contato! -->
+        <section>
+            <h2>Entre em contato!</h2>
+        
+            <div class="container-contato">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Seu Nome</label>
+                    <input class="form-control" id="exampleFormControlInput1" placeholder="Nome Sobrenome">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Sua mensagem</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <button type="button" class="btn btn-secondary" id="enviar-mensagem">Enviar</button>
+            </div>
+            
+            </section>
+
+    <!-- contato -->
+    <footer>
+        <h2>Outras Informações:</h2>
+        <p>E-mail: XXX@YYY.COM</p>
+        <p>Telefone: (XX) XXXXX-XXXX</p>
+        <p>Github: <a target="_blank" href="http://github.com">Meu Github</a></p>
+    </footer>
+    <script>
+        //Vamos criar uma função que ao clicar, muda o tema da página;
+        // Como vai funcionar:
+        // Temos a checkbox, id ("flexSwitchCheckDefault"), ao clicar, ela munda para um tema, no caso, o claro.
+        //  SE, ela já estiver clicada, e clicar novamente, ela muda para o tema escuro, retoma no estado "original".
+
+        // o .ready é para garantir que o documento está pronto para ser manipulado.
+        $(document).ready(function(){
+            $('#flexSwitchCheckDefault').on('click', function(){
+
+                // Vamos armazenar o texto!
+
+                let textoatual = $('#tema').text(); // ".text" pega o TEXTO DENTRO
+
+                // Agora vamos criar a função de alterar o texto.
+
+                if(textoatual === "Tema Escuro"){
+                    $('#tema').text("Tema Claro");
+                } else {
+                    $('#tema').text("Tema Escuro");
+                }
+
+                // Alterando as classes, com auxilio do css
+
+                $('body').toggleClass('tema-escuro tema-claro');
+
+            })
+        })
+
+        // Que negócio top, essa troca de classes é muito útil, e o jquery facilita muito isso.
+        // Ela fica no css, funciona assi, ele troca com base na ordem, se a classe "tema-escuro" estiver ativa, ele troca para "tema-claro", e vice-versa.
+
+        // Vamos configurar o formulário!
+
+
+        $(document).ready(function(){
+            $('#enviar-mensagem').on('click', function(){
+                // Vamos armazenar os valores dos inputs
+                let nome = $('#exampleFormControlInput1').val();
+                let mensagem = $('#exampleFormControlTextarea1').val(); //o .val pega os valores de dentro do input
+
+                // Vamos criar um alerta, com os valores para testar
+                alert(`Nome: ${nome} \n Mensagem: ${mensagem}`);
+            })
+        })
+    </script>
+</body>
+</html>

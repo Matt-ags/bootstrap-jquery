@@ -27,10 +27,12 @@
 ### Porém:
 - Jquery é uma boa pedida para projetos pequenos e sites estáticos, por sua "facilidade".
 
-
+---
 
 ## Estrutura Básica:
-- **$('elemento_que_quero_editar').função_que_quero_executar()**
+
+```$('elemento_que_quero_editar').função_que_quero_executar()
+
 - Em "função_que_quero_executar", são as ações do jquery! qualquer duvida, podemos acessar a documentação do jquery.
 
 ## Comparação: JavaScript vs jQuery
