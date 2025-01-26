@@ -164,6 +164,11 @@
 
                 // Vamos criar um alerta, com os valores para testar
                 alert(`Nome: ${nome} \n Mensagem: ${mensagem}`);
+
+                // vamos "colocar" o whatz:
+
+                let url = `https://api.whatsapp.com/send?phone=SEUNUMERO&text=Olá, sou ${nome}%0AMensagem: ${mensagem}`;
+                window.open(url, '_blank');
             })
         })
     </script>
