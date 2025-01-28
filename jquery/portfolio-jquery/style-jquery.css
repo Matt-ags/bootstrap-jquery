@@ -49,19 +49,10 @@ header{
 
 /* classes css, interessante... */
 body.tema-escuro{
-    background-color: #222 !important;
-    color: #fff !important;
-
+    color: #000;
 }
 
 body.tema-claro{
     background-color: #fff !important;
     color: #000 !important;
-
-    header{
-        background-color: #222 !important;
-        color: #fff !important;
-        position: sticky;
-        top: 0;
-    }
 }
